@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        String t = sc.next();
+        double sum =0;
+        double acumulator = 0;
+        double m[][] = new double[12][12];
+
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                m[i][j] = sc.nextDouble();
+                if(i<j){
+                    sum = sum + m[i][j];
+                    acumulator ++;
+                    
+                    
+                }
+            }
+        }
+        if(t.equals("S")){
+            System.out.printf("%.1f\n",sum);
+            
+        }if(t.equals("M")){
+            System.out.printf("%.1f\n",sum/acumulator);
+        }
+    }
+    
+    
+    }
+   

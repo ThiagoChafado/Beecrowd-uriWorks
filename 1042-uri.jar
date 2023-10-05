@@ -1,0 +1,64 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       int A = sc.nextInt();
+       int B = sc.nextInt();
+       int C = sc.nextInt();
+       int primeiro = 0,segundo = 0,terceiro = 0;
+       int a,b,c;
+       a = A;
+       b = B;
+       c = C;
+       
+       if(A > B && A > C){
+           primeiro =A;
+           if (B>C){
+               segundo = B;
+               terceiro = C;
+               
+           }else{
+               segundo = C;
+               terceiro = B;
+           }
+           
+       }if(B > A && B > C){
+           primeiro = B;
+           if(A>C){
+               segundo = A;
+               terceiro = C;
+           }else{
+               segundo = C;
+               terceiro = A;
+           }
+       }if(C > A && C > B){
+           primeiro = C;
+           if (A>B){
+               segundo = A;
+               terceiro = B;
+               
+           }else{
+               segundo = B;
+               terceiro = A;
+           }
+       }
+       
+       System.out.printf("%d\n",terceiro);
+       System.out.printf("%d\n",segundo);
+       System.out.printf("%d\n",primeiro);
+       System.out.printf("\n");
+       System.out.printf("%d\n",a);
+       System.out.printf("%d\n",b);
+       System.out.printf("%d\n",c);
+       
+       
+       
+       
+       
+        
+    }
+}

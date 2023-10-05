@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       int i;
+       float contador = 0;
+       float acumulador = 0;
+       for (i=0;i<6;i++){
+           float n = sc.nextFloat();
+           if (n > 0){
+               contador = contador +1;
+               acumulador = acumulador + n;
+           }
+           
+       }
+        System.out.printf("%.0f valores positivos\n",contador);
+        System.out.printf("%.1f\n",(acumulador /contador));
+    }
+    
+}

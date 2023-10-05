@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       int i =0;
+       int contador = 0;
+       float acumulador =0;
+       while(i == 0){
+           float n = sc.nextFloat();
+           if(n <0 || n >10){
+               System.out.printf("nota invalida\n");
+               
+           }else{
+               acumulador = acumulador + n;
+               contador++;
+           }
+           if (contador ==2){
+               break;
+           }
+       }System.out.printf("media = %.2f\n", (acumulador/2));
+    }
+}

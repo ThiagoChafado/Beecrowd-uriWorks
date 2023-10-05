@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+public class Main{
+
+    
+    public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       int V[] = new int[20];
+       for (int i=0;i<20;i++){
+           V[i] = sc.nextInt();
+            
+       }
+       for (int i=0;i<10;i++){
+           int aux = V[i];
+           V[i] = V[V.length -1 - i];
+           V[V.length - 1 - i] = aux;
+           
+       }for (int i=0;i<20;i++){
+           System.out.printf("N[%d] = %d\n",i,V[i]);
+       }
+    }
+}
